@@ -1,10 +1,11 @@
 [Documentation](https://libvirt.org/formatnetwork.html)<br />
 
-**C'est ce qui nous permet de gérer la mise en réseau des machines virtuelles.**
+**C'est ce qui nous permet de gérer la mise en réseau des machines virtuelles.**<br />
 NAT : isole les VM par groupe, elles peuvent communiquer entre-elles dans ce groupe, ainsi que faire du NAT avec l'hôte (= NAT network).
 Route : isole les VM par groupe, elles peuvent communiquer entre-elles dans ce groupe (= LAN segment).
 Open : les machines virtuelles ne sont pas isolés, elles sont vues et peuvent voir sur le réseau de l'hôte (= Bridge).
 No forward : les machines sont isolées complètement (= Host only).
+<br />
 
 ## EXEMPLE DE CONFIGURATION
 Simple réseau avec un DHCP, des DNS spécifiques + un exemple de réservation d'adresse IP et un exemple de mapping IP/NDD.
@@ -32,4 +33,4 @@ Simple réseau avec un DHCP, des DNS spécifiques + un exemple de réservation d
   </ip>
 </network>
 ```
-
+<br />
