@@ -4,6 +4,7 @@
 Pour crer une VM en CLI, deux possibilités :
 - `virt-install` : toutes les options dans la ligne de commande.
 - `virsh { define | create }` : toutes les options dans un fichier XML.
+<br />
 
 ## EXEMPLE DE CONFIGURATION avec virt-install
 Simple machine virtuelle, pour un lab, en utilisant un pool et un network précédement créé.
@@ -11,6 +12,7 @@ Simple machine virtuelle, pour un lab, en utilisant un pool et un network préc�
 ```bash
 virt-install ...
 ```
+<br />
 
 ## EXEMPLE DE CONFIGURATION avec virsh
 Simple machine virtuelle, pour un lab, en utilisant un pool et un network précédement créé.
@@ -59,4 +61,4 @@ Simple machine virtuelle, pour un lab, en utilisant un pool et un network préc�
   </devices>
 </domain>
 ```
-
+<br />
