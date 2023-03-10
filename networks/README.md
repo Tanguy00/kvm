@@ -1,4 +1,4 @@
-# https://libvirt.org/formatnetwork.html
+[Documentation](https://libvirt.org/formatnetwork.html)<br />
 
 **C'est ce qui nous permet de gérer la mise en réseau des machines virtuelles.**
 NAT : isole les VM par groupe, elles peuvent communiquer entre-elles dans ce groupe, ainsi que faire du NAT avec l'hôte (= NAT network).
