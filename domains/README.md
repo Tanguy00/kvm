@@ -1,6 +1,6 @@
 [Documentation](https://libvirt.org/formatdomain.html)<br />
 
-**C'est la définition de nos machines virtuelles.**<br />
+**C'est la définition de nos machines virtuelles.**<br /><br />
 Pour crer une VM en CLI, deux possibilités :
 - `virt-install` : toutes les options dans la ligne de commande.
 - `virsh { define | create }` : toutes les options dans un fichier XML.
