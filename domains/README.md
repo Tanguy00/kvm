@@ -10,7 +10,14 @@ Pour crer une VM en CLI, deux possibilités :
 Simple machine virtuelle, pour un lab, en utilisant un pool et un network précédement créé.
 
 ```bash
-virt-install ...
+virt-install \
+    --name debian_lab \
+    --description "Machine virtuelle de test" \
+    --memory unit=MiB,memory=2048 \
+    --vcpus 2 \
+    --disk path="/home/tn/KVM/images/debian_lab.qcow2",size=20
+    --network network=lab_nat
+    --cdrom "/home/tn/KVM/iso/"
 ```
 <br />
 
