@@ -10,14 +10,18 @@ Pour crer une VM en CLI, deux possibilités :
 Simple machine virtuelle, pour un lab, en utilisant un pool et un network précédement créé.
 
 ```bash
-virt-install \
+virt-install \ 
     --name debian_lab \
     --description "Machine virtuelle de test" \
-    --memory unit=MiB,memory=2048 \
+    --memory memory=2048 \
     --vcpus 2 \
-    --disk path="/home/tn/KVM/images/debian_lab.qcow2",size=20
-    --network network=lab_nat
-    --cdrom "/home/tn/KVM/iso/"
+    --disk path="/home/tn/KVM/images/debian_lab.qcow2",size=20 \
+    --network network=lab_nat \
+    --location "/home/tn/KVM/isos/debian-11.5.0-amd64-netinst.iso" \
+    #--vnc \ ### si activé, utilise VNC au lieu de SPICE
+    --noautoconsole \ ### si activé, libère le prompt et n'ouvre pas de GUI directement
+    --extra-args console=ttyS9 \
+    --channel=qemu-vdagent,source.clipboard.copypaste=on,source.mouse.mode=client ### permet le presse-papier partagé
 ```
 <br />
 
@@ -39,6 +43,14 @@ Simple machine virtuelle, pour un lab, en utilisant un pool et un network préc�
   <on_poweroff>destroy</on_poweroff>
   <on_reboot>restart</on_reboot>
   <on_crash>destroy</on_crash>
+
+  # Permet le presse-papier partagé
+  <channel type='qemu-vdagent'>
+    <source>
+      <clipboard copypaste='yes'/>
+      <mouse mode='client'/>
+    </source>      
+  </channel>
 
   <devices>
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
