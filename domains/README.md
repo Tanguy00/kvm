@@ -44,14 +44,6 @@ Simple machine virtuelle, pour un lab, en utilisant un pool et un network préc�
   <on_reboot>restart</on_reboot>
   <on_crash>destroy</on_crash>
 
-  # Permet le presse-papier partagé
-  <channel type='qemu-vdagent'>
-    <source>
-      <clipboard copypaste='yes'/>
-      <mouse mode='client'/>
-    </source>      
-  </channel>
-
   <devices>
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='file' device='disk'>
@@ -77,6 +69,15 @@ Simple machine virtuelle, pour un lab, en utilisant un pool et un network préc�
     <console type='pty'>
       <target type='serial' port='0'/>
     </console>
+  
+    # Permet le presse-papier partagé
+    <channel type='qemu-vdagent'>
+      <source>
+        <clipboard copypaste='yes'/>
+        <mouse mode='client'/>
+      </source>      
+    </channel>
+
   </devices>
 </domain>
 ```
