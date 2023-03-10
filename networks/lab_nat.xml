@@ -1,0 +1,14 @@
+<network>
+  <name>lab_nat</name>
+  <forward mode='nat'/>
+  <bridge name='virbr1'/>
+  <dns>
+    <forwarder addr="1.1.1.1"/>
+    <forwarder addr="9.9.9.9"/>
+  </dns>
+  <ip address='10.0.0.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='10.0.0.101' end='10.0.0.110'/>
+    </dhcp>
+  </ip>
+</network>
