@@ -11,6 +11,7 @@
 - ZFS : ...
 - Vstorage : ...
 ...
+<br />
 
 ## EXEMPLE DE CONFIGURATION
 Simple pool de type directory, sur l'hôte.
@@ -23,4 +24,4 @@ Simple pool de type directory, sur l'hôte.
   </target>
 </pool>
 ```
-
+<br />
