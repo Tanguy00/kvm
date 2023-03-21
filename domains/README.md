@@ -21,7 +21,7 @@ virt-install \
     #--vnc \ ### si activé, utilise VNC au lieu de SPICE
     --noautoconsole \ ### si activé, libère le prompt et n'ouvre pas de GUI directement
     --extra-args console=ttyS9 \
-    --channel=qemu-vdagent,source.clipboard.copypaste=on,source.mouse.mode=client ### permet le presse-papier partagé
+    #--channel=qemu-vdagent,source.clipboard.copypaste=on,source.mouse.mode=client ### permet le presse-papier partagé pour VNC
 ```
 <br />
 
