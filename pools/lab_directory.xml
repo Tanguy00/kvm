@@ -1,6 +1,6 @@
 <pool type="dir">
   <name>lab_directory</name>
   <target>
-    <path>/home/tn/KVM/images</path>
+    <path>/home/tn/kvm/images</path>
   </target>
 </pool>
